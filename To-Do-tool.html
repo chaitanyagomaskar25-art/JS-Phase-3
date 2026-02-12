@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-tool</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6366f1, #22c55e);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+.To-Do-tool {
+     max-width: 80%;
+    max-height: 450;
+    overflow-y: auto;
+    margin: 90px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    border: 1px solid #e5e7eb;
+    border-top: 8px solid #4f46e5;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.To-Do-tool:hover {
+    transform: translateY(-4px);
+}
+
+.To-Do-tool h1 {
+    color: #111827;
+    font-size: 1.9rem;
+    margin-bottom: 28px;
+    letter-spacing: 0.3px;
+}
+
+.box input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 16px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    color: #1f2937;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.box input:focus {
+    border-color: #4f46e5;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.box button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    margin-bottom: 22px;
+    transition: 0.3s ease;
+}
+
+.box button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+#addList {
+    list-style: none;
+    padding: 0;
+}
+
+#addList li {
+    background: #f9fafb;
+    margin-bottom: 15px;
+    padding: 14px 16px;
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #1f2937;
+    font-weight: 500;
+    transition: 0.2s;
+}
+
+#addList li:hover {
+    background: #ffffff;
+    transform: scale(1.01);
+}
+
+.delete {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.25s;
+}
+
+.delete:hover {
+    background: #fecaca;
+    transform: scale(1.05);
+}
+
+#addList li span:first-child {
+    display: flex;
+    gap: 8px;
+    max-width: 75%;
+    text-align: left;
+    line-height: 1.4;
+    word-break: break-word;
+}
+
+#addList li span:first-child strong {
+    min-width: 20px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="To-Do-tool">
+        <h1>🎓 To-Do List Tool</h1>
+
+        <div class="box">
+            <input type="text" id="list" placeholder="Enter your list here...">
+            <button id="btn">ADD</button>
+            <ul id="addList"></ul>
+        </div>
+    </div>
+
+    <script src="To-Do-tool.js"></script>
+</body>
+</html>
