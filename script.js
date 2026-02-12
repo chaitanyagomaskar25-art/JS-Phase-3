@@ -12,7 +12,7 @@ function openProject(id, url) {
             });
         }
 
-        openProject("quizApp", "quize/home.html");
+        openProject("quizApp", "home.html");
         openProject("randomQouteGenerator", "RandomQuote.html");
         openProject("tipCalculator", "TipCalculator.html");
         openProject("toDoList", "To-Do-tool.html");
