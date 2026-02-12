@@ -1,0 +1,96 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #818cf8;
+        }
+
+        .subtitle {
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        #quizApp, 
+        #randomQouteGenerator, 
+        #tipCalculator, 
+        #toDoList {
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px 20px;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #quizApp:hover, 
+        #randomQouteGenerator:hover, 
+        #tipCalculator:hover, 
+        #toDoList:hover {
+            transform: translateY(-5px);
+            background: rgba(51, 65, 85, 0.9);
+            border-color: #38bdf8;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+        }
+
+        #quizApp:active, 
+        #randomQouteGenerator:active, 
+        #tipCalculator:active, 
+        #toDoList:active {
+            transform: translateY(0);
+        }
+
+        #quizApp::after, 
+        #randomQouteGenerator::after, 
+        #tipCalculator::after, 
+        #toDoList::after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background: #38bdf8;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        #quizApp:hover::after, 
+        #randomQouteGenerator:hover::after, 
+        #tipCalculator:hover::after, 
+        #toDoList:hover::after {
+            width: 60px;
+        }
